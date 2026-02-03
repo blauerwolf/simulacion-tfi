@@ -1,1 +1,0 @@
-function velocidad_asignada = funcion_selector_velocidad(BW_disponible)\n% Selecciona velocidad optima\n\nvelocidades = [128, 96, 64];\nmargen = 1.1;\n\nvelocidad_asignada = 64;\n\nfor i = 1:length(velocidades)\n    if BW_disponible >= velocidades(i) * margen\n        velocidad_asignada = velocidades(i);\n        break;\n    end\nend\n
